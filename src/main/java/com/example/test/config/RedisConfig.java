@@ -12,7 +12,7 @@ public class RedisConfig {  //bean 등록
 
     @Bean
     public LettuceConnectionFactory redisConnectionFactory() {
-        return new LettuceConnectionFactory("localhost", 6379);
+        return new LettuceConnectionFactory("localhost",6397);
     }
 
     @Bean
