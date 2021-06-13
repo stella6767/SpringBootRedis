@@ -23,14 +23,4 @@ public class TestApplication {
     }
 
 
-    @Bean
-    public CommandLineRunner datainit(StringRedisTemplate stringRedisTemplate) {
-        return (args) -> {
-            // 데이터 초기화하기
-            ValueOperations<String,String> valueOperations = stringRedisTemplate.opsForValue();
-            valueOperations.set("1","test");
-        };
-    }
-
-
 }

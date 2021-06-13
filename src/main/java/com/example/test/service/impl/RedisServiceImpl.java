@@ -24,10 +24,8 @@ public class RedisServiceImpl implements RedisService { //요런방식 1
 
     @Override
     public void setData(String key, String value) {
-        //ValueOperations<String,String> valueOperations = stringRedisTemplate.opsForValue();
-        //valueOperations.set(key,value);
-
-        System.out.println(key+" "+value);
+        ValueOperations<String,String> valueOperations = stringRedisTemplate.opsForValue();
+        valueOperations.set(key,value);
     }
 
     @Override
